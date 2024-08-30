@@ -15,3 +15,54 @@ Customizable Options:
     Random user agents can be selected per proxy check to avoid detection and mimic genuine traffic.
 
 This script is a powerful solution for anyone needing to maintain a reliable set of proxies, whether for security testing, anonymous browsing, or network research purposes.
+
+
+Here are some example commands that demonstrate how to use the script with different options:
+
+1. **Basic Proxy Check:**
+   - Validate proxies from the default list (`output.txt`) using HTTP method and a 20-second timeout.
+   ```bash
+   python3 script_name.py
+   ```
+
+2. **Check Proxies with Custom Timeout and Verbose Output:**
+   - Use a 10-second timeout for each proxy check, enable verbose output for detailed feedback.
+   ```bash
+   python3 script_name.py --timeout 10 --verbose
+   ```
+
+3. **Validate Proxies from a Custom List File:**
+   - Check proxies listed in `my_proxies.txt` using HTTPS method.
+   ```bash
+   python3 script_name.py --list my_proxies.txt --proxy https
+   ```
+
+4. **Use Random User Agent for Each Proxy Check:**
+   - Randomly select a user agent for each proxy from the list of user agents.
+   ```bash
+   python3 script_name.py --random_agent
+   ```
+
+5. **Check Proxies and Add Valid Ones to Proxychains Configuration:**
+   - Validate proxies and add valid ones to the specified `proxychains.conf` file.
+   ```bash
+   python3 script_name.py --add_to_proxychains --proxychains_conf /path/to/custom_proxychains.conf
+   ```
+
+6. **Set Up Cyclic Execution to Run Every 60 Seconds:**
+   - Run the proxy check and update cycle every 60 seconds.
+   ```bash
+   python3 script_name.py --cycle 60
+   ```
+
+7. **Validate SOCKS5 Proxies and Specify a Different Website for Validation:**
+   - Use SOCKS5 proxies and check their validity using `https://example.com`.
+   ```bash
+   python3 script_name.py --proxy socks5 --site https://example.com
+   ```
+
+8. **Combine Options for a Comprehensive Check:**
+   - Use a 15-second timeout, select random user agents, enable verbose output, and cycle every 120 seconds.
+   ```bash
+   python3 script_name.py --timeout 15 --random_agent --verbose --cycle 120
+   ```
