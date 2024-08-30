@@ -1,3 +1,5 @@
+![whirlpool](https://github.com/user-attachments/assets/25ab23f9-f822-4a86-9a29-9bed2bd16e2f)
+
 This Python script is a comprehensive tool designed to manage and validate proxies efficiently. It checks the validity of different types of proxies, including HTTP, HTTPS, SOCKS4, and SOCKS5, by attempting to connect to a specified website (default: https://google.com/). The script can handle multiple proxies at once using threading, which speeds up the validation process.
 
 Key Features:
